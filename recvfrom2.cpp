@@ -9,7 +9,7 @@ int main() {
     memset(&sin,0,sizeof(sockaddr_in));
     sin.sin_family = AF_INET;
     sin.sin_port = htons(1234);
-    inet_pton(AF_INET,"127.0.0.1",&sin.sin_addr);
+    inet_pton(AF_INET,"localhost",&sin.sin_addr);
 
 
     int fd = socket(AF_INET,SOCK_DGRAM,0);
