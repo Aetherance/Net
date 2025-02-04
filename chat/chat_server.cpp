@@ -52,7 +52,6 @@ int main() {
         perror("accept error\n");
         return -1;
     }
-    
 
     pool.submit([new_sock](){
         talk(new_sock);
