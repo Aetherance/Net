@@ -17,7 +17,7 @@ int main() {
         perror("bind");
     }
 
-    listen(lfd,2);
+    listen(lfd,10);
 
     while (true) {
         char ip[16];

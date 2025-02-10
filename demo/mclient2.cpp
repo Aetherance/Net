@@ -15,7 +15,12 @@ int main() {
 
     connect(fd,(sockaddr*)&sin,sizeof(sockaddr));
 
-    getchar();
+    while (true)
+    {
+        getchar();
+        send(fd,"hello",6,0);
+    }
+    
 
     return 0;
 }

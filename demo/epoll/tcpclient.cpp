@@ -10,7 +10,7 @@ int main() {
     int sin_size = sizeof(sockaddr_in);
     memset(&sin,0,sin_size);
     sin.sin_family = AF_INET;
-    sin.sin_port = htons(4567);
+    sin.sin_port = htons(1234);
     sin.sin_addr.s_addr = INADDR_ANY;
     
     connect(lfd,(sockaddr*)&sin,sizeof(sin));
