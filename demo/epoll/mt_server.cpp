@@ -56,7 +56,7 @@ int main() {
                     char ip[16];
                     inet_ntop(AF_INET,&csin.sin_addr,ip,sizeof(csin));
                     cout<<"Client "<<ip<<":"<<ntohs(csin.sin_port)<<" exited!"<<endl;
-                    // close(rev[i].data.fd);
+                    close(rev[i].data.fd);
                     epoll_ctl(epfd, EPOLL_CTL_DEL, rev[i].data.fd, NULL);
                 }
                 else if(r_ret > 0){
