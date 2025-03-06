@@ -19,6 +19,5 @@ int main() {
         cout<<"send message!"<<endl;
         send(lfd,"msg",4,0);
     }
-
     return 0;
 }
