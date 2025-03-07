@@ -1,6 +1,7 @@
 #include<iostream>
 #include<memory.h>
 #include<arpa/inet.h>
+#include<unistd.h>
 
 int main() {
     int lfd = socket(AF_INET,SOCK_STREAM,0);
@@ -21,6 +22,9 @@ int main() {
     int sock = accept(lfd,(sockaddr*)&client_sin,&client_sin_len);
 
     send(sock,"Hello World!",13,0);
+    
+    close(sock);
+    close(lfd);
 
     return 0;
 }

@@ -1,6 +1,7 @@
 #include<iostream>
 #include<arpa/inet.h>
 #include<memory.h>
+#include<unistd.h>
 
 int main() {
     sockaddr_in sin;
@@ -17,6 +18,8 @@ int main() {
 
     recv(sock,buff,13,0);
     std::cout<<buff;    
+
+    close(sock);
 
     return 0;
 }
